@@ -12,7 +12,7 @@ struct Car
 
         if let yearOfIssue = self.yearOfIssue {
             description += "Год выпуска: \(yearOfIssue) \n"
-        }else {
+        } else {
             description += "Год выпуска: - \n"
         }
         

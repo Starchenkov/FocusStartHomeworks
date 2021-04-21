@@ -41,11 +41,11 @@ class MainApp
         }
     }
     
-   func strongReadLine(_ text: String) -> String {
+    func strongReadLine(_ text: String) -> String {
         print(text)
-    if let inputText = readLine(), inputText != "" {
+        if let inputText = readLine(), inputText != "" {
             return inputText
-        }else {
+        } else {
             print("Повторите ввод")
             return self.strongReadLine(text)
         }
@@ -56,9 +56,9 @@ class MainApp
         let body = strongReadLine("Введите тип кузова автомобиля (номер)")
         
         guard let bodyNumber = Int(body), let carBody = Car.Body(rawValue: bodyNumber) else {
-                    print("Ошибка при вводе типа кузова")
+            print("Ошибка при вводе типа кузова")
             return self.inputBody()
-                }
+        }
         return carBody
     }
     
@@ -87,9 +87,8 @@ class MainApp
     
     func printFilteredCars() {
         let carsBody = inputBody()
-        let bodyList = cars.filter {
-            $0.body == carsBody
-        }
+        let bodyList = cars.filter { $0.body == carsBody }
+        
         bodyList.forEach { print($0.description) }
     }
 }
