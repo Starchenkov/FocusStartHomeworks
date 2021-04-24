@@ -11,7 +11,7 @@ class ThreadSafeArray<T>
     private var array = [T]()
     
     private let isolationQueue = DispatchQueue(label: "safeArrayQueue",
-                                       attributes: .concurrent)
+                                               attributes: .concurrent)
     private var count: Int = 0
     
     var isEmpty: Bool {
@@ -35,13 +35,13 @@ class ThreadSafeArray<T>
     }
     
     func remove(at index: Int){
-        isolationQueue.async(flags: .barrier) {
+        self.isolationQueue.async(flags: .barrier) {
             self.array.remove(at: index)
         }
     }
     
     func `subscript`(index: Int) -> T {
-        isolationQueue.sync {
+        self.isolationQueue.sync {
             return self.array[index]
         }
     }
