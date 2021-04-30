@@ -11,7 +11,7 @@ var threadSafeArray = ThreadSafeArray<String>()
 let userQueue = DispatchQueue(label: "userQueue",
                               attributes: .concurrent)
 
-print("Добавляем две задачи ассинхронно в одну параллельную очередь")
+print("Добавляем две задачи асинхронно в одну параллельную очередь")
 let groupQueue = DispatchGroup.init()
 
 userQueue.async(group: groupQueue) {
@@ -28,11 +28,9 @@ userQueue.async(group: groupQueue) {
 
 groupQueue.notify(queue: .main) {
     print("Массив пустой? \(threadSafeArray.isEmpty)")
-    print("Количество добавленных элементов: \(threadSafeArray.showCount())")
+    print("Количество добавленных элементов: \(threadSafeArray.count)")
     print("Массив содержит элемент 'CCC 100' - \(threadSafeArray.contains("CCC 100"))")
     exit(EXIT_SUCCESS)
 }
 
 dispatchMain()
-
-
