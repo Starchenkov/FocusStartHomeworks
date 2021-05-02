@@ -25,15 +25,15 @@ class ThreadSafeArray<T>
     }
     
     func append(_ item: T) {
-        isolationQueue.async(flags: .barrier) {
-            self.array.append(item)
+        isolationQueue.async(flags: .barrier) { [weak self] in
+            self?.array.append(item)
             print("Добавлен элемент \(item)")
         }
     }
     
     func remove(at index: Int){
-        isolationQueue.async(flags: .barrier) {
-            self.array.remove(at: index)
+        isolationQueue.async(flags: .barrier) { [weak self] in
+            self?.array.remove(at: index)
         }
     }
     
