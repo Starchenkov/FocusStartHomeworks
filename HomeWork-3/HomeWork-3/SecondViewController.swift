@@ -45,11 +45,11 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        configureUI()
         setInfo()
     }
     
-    func setupUI() {
+    func configureUI() {
         view.addSubview(scrollView)
         scrollView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor).isActive = true
         scrollView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor).isActive = true
@@ -75,7 +75,7 @@ class SecondViewController: UIViewController {
         waitingOfFocusLabel.leftAnchor.constraint(equalTo: scrollView.leftAnchor, constant: 10).isActive = true
         waitingOfFocusLabel.widthAnchor.constraint(equalTo: scrollView.widthAnchor, multiplier: 0.95).isActive = true
         waitingOfFocusLabel.topAnchor.constraint(equalTo: descriptionIosLabel.bottomAnchor, constant: 10).isActive = true
-        waitingOfFocusLabel.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: 10).isActive = true
+        waitingOfFocusLabel.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -5).isActive = true
     }
     
     func setInfo() {

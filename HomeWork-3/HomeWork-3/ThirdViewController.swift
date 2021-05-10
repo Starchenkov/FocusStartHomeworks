@@ -49,12 +49,12 @@ class ThirdViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        configureUI()
         setInfo()
         animationImage()
     }
     
-    func setupUI() {
+    func configureUI() {
         view.addSubview(scrollView)
         scrollView.snp.makeConstraints { (make) in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.topMargin)
@@ -89,7 +89,7 @@ class ThirdViewController: UIViewController {
             make.top.equalTo(hobbyDescriptionLabel.snp.bottom).offset(10)
             make.left.equalTo(scrollView.snp.left).offset(10)
             make.width.equalTo(scrollView.snp.width).multipliedBy(0.9)
-            make.bottom.equalTo(scrollView.snp.bottom).offset(10)
+            make.bottom.equalTo(scrollView.snp.bottom).offset(-5)
         }
     }
     
