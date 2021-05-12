@@ -5,8 +5,6 @@
 //  Created by Sergey Starchenkov on 03.05.2021.
 //
 
-import Foundation
-
 struct Constants
 {
     static let iOSImageName = "iOS"

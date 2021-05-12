@@ -69,7 +69,15 @@
 		2051D84526404FE800FF84F3 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2051D80826404FE800FF84F3 /* ConstraintLayoutSupportDSL.swift */; };
 		2051D84626404FE800FF84F3 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2051D80926404FE800FF84F3 /* ConstraintMakerRelatable.swift */; };
 		2051D84726404FE800FF84F3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2051D80A26404FE800FF84F3 /* README.md */; };
+		207E3B10264A8EE800AE1D2E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207E3B0F264A8EE800AE1D2E /* DataManager.swift */; };
 		20A1E7DC263FC0EE00DAB620 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A1E7DB263FC0EE00DAB620 /* Constants.swift */; };
+		20CDEC0E2649A12A00685981 /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CDEC0D2649A12A00685981 /* QuoteViewController.swift */; };
+		20EBD5A9264A11C300221AB8 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EBD5A8264A11C300221AB8 /* Quote.swift */; };
+		20EBD5AC264A168700221AB8 /* QuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EBD5AB264A168700221AB8 /* QuoteTableViewCell.swift */; };
+		20EBD5B0264A2D2D00221AB8 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EBD5AF264A2D2D00221AB8 /* CollectionViewController.swift */; };
+		20EBD5B3264A332400221AB8 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EBD5B2264A332400221AB8 /* CollectionViewCell.swift */; };
+		20EBD5BA264A477800221AB8 /* LoggerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EBD5B9264A477800221AB8 /* LoggerVC.swift */; };
+		20EBD5C0264A57DE00221AB8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EBD5BF264A57DE00221AB8 /* Router.swift */; };
 		B4DA15581398A7EFFF449BC1 /* Pods_HomeWork_3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238EB2AAB368F37587EC1FC0 /* Pods_HomeWork_3.framework */; };
 /* End PBXBuildFile section */
 
@@ -161,7 +169,15 @@
 		2051D80826404FE800FF84F3 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		2051D80926404FE800FF84F3 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
 		2051D80A26404FE800FF84F3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		207E3B0F264A8EE800AE1D2E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		20A1E7DB263FC0EE00DAB620 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		20CDEC0D2649A12A00685981 /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
+		20EBD5A8264A11C300221AB8 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		20EBD5AB264A168700221AB8 /* QuoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewCell.swift; sourceTree = "<group>"; };
+		20EBD5AF264A2D2D00221AB8 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		20EBD5B2264A332400221AB8 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		20EBD5B9264A477800221AB8 /* LoggerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerVC.swift; sourceTree = "<group>"; };
+		20EBD5BF264A57DE00221AB8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		238EB2AAB368F37587EC1FC0 /* Pods_HomeWork_3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeWork_3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		523E8B2039A16FCB38D3A449 /* Pods-HomeWork-3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeWork-3.release.xcconfig"; path = "Target Support Files/Pods-HomeWork-3/Pods-HomeWork-3.release.xcconfig"; sourceTree = "<group>"; };
 		D7808F6347B0CA77EEAD4521 /* Pods-HomeWork-3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeWork-3.debug.xcconfig"; path = "Target Support Files/Pods-HomeWork-3/Pods-HomeWork-3.debug.xcconfig"; sourceTree = "<group>"; };
@@ -211,9 +227,17 @@
 			children = (
 				20201452263EF54100C57EBD /* AppDelegate.swift */,
 				20201454263EF54100C57EBD /* SceneDelegate.swift */,
+				20EBD5BF264A57DE00221AB8 /* Router.swift */,
 				20201456263EF54100C57EBD /* FirstViewController.swift */,
 				20201469263EF6AE00C57EBD /* SecondViewController.swift */,
+				20EBD5AF264A2D2D00221AB8 /* CollectionViewController.swift */,
+				20EBD5B9264A477800221AB8 /* LoggerVC.swift */,
+				20EBD5B2264A332400221AB8 /* CollectionViewCell.swift */,
 				2020146C263EF6D000C57EBD /* ThirdViewController.swift */,
+				20CDEC0D2649A12A00685981 /* QuoteViewController.swift */,
+				20EBD5AB264A168700221AB8 /* QuoteTableViewCell.swift */,
+				20EBD5A8264A11C300221AB8 /* Quote.swift */,
+				207E3B0F264A8EE800AE1D2E /* DataManager.swift */,
 				20A1E7DB263FC0EE00DAB620 /* Constants.swift */,
 				20201458263EF54100C57EBD /* Main.storyboard */,
 				2020145B263EF54200C57EBD /* Assets.xcassets */,
@@ -522,9 +546,12 @@
 				20201457263EF54100C57EBD /* FirstViewController.swift in Sources */,
 				2051D82C26404FE800FF84F3 /* ConstraintDSL.swift in Sources */,
 				2051D84126404FE800FF84F3 /* ConstraintRelatableTarget.swift in Sources */,
+				20EBD5AC264A168700221AB8 /* QuoteTableViewCell.swift in Sources */,
 				2051D84326404FE800FF84F3 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
+				20EBD5A9264A11C300221AB8 /* Quote.swift in Sources */,
 				2051D84626404FE800FF84F3 /* ConstraintMakerRelatable.swift in Sources */,
 				2020146D263EF6D000C57EBD /* ThirdViewController.swift in Sources */,
+				20EBD5C0264A57DE00221AB8 /* Router.swift in Sources */,
 				2051D83A26404FE800FF84F3 /* ConstraintMaker.swift in Sources */,
 				20201453263EF54100C57EBD /* AppDelegate.swift in Sources */,
 				2051D84426404FE800FF84F3 /* ConstraintDirectionalInsets.swift in Sources */,
@@ -532,8 +559,10 @@
 				2051D83426404FE800FF84F3 /* ConstraintLayoutGuide.swift in Sources */,
 				2051D82E26404FE800FF84F3 /* ConstraintPriority.swift in Sources */,
 				20201455263EF54100C57EBD /* SceneDelegate.swift in Sources */,
+				20EBD5B3264A332400221AB8 /* CollectionViewCell.swift in Sources */,
 				2051D83826404FE800FF84F3 /* ConstraintOffsetTarget.swift in Sources */,
 				2051D83026404FE800FF84F3 /* ConstraintDirectionalInsetTarget.swift in Sources */,
+				20EBD5BA264A477800221AB8 /* LoggerVC.swift in Sources */,
 				2051D83B26404FE800FF84F3 /* ConstraintRelation.swift in Sources */,
 				2051D84026404FE800FF84F3 /* Debugging.swift in Sources */,
 				2051D82026404FE800FF84F3 /* SnapKit-dummy.m in Sources */,
@@ -549,8 +578,10 @@
 				2051D83126404FE800FF84F3 /* ConstraintConfig.swift in Sources */,
 				2051D82F26404FE800FF84F3 /* ConstraintInsetTarget.swift in Sources */,
 				2051D82626404FE800FF84F3 /* ConstraintMakerPriortizable.swift in Sources */,
+				207E3B10264A8EE800AE1D2E /* DataManager.swift in Sources */,
 				2051D83D26404FE800FF84F3 /* ConstraintView+Extensions.swift in Sources */,
 				2051D83F26404FE800FF84F3 /* Constraint.swift in Sources */,
+				20EBD5B0264A2D2D00221AB8 /* CollectionViewController.swift in Sources */,
 				2051D83C26404FE800FF84F3 /* ConstraintLayoutGuideDSL.swift in Sources */,
 				2051D83526404FE800FF84F3 /* ConstraintLayoutSupport.swift in Sources */,
 				20A1E7DC263FC0EE00DAB620 /* Constants.swift in Sources */,
@@ -560,6 +591,7 @@
 				2051D82726404FE800FF84F3 /* ConstraintAttributes.swift in Sources */,
 				2051D82526404FE800FF84F3 /* ConstraintDescription.swift in Sources */,
 				2051D82826404FE800FF84F3 /* ConstraintViewDSL.swift in Sources */,
+				20CDEC0E2649A12A00685981 /* QuoteViewController.swift in Sources */,
 				2051D83E26404FE800FF84F3 /* ConstraintItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
