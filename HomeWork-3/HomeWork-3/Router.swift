@@ -12,7 +12,7 @@ internal final class MainRouter
     private let tabbar: UITabBarController
     
     private let firstNavController: UINavigationController
-    private let firstViewController: FirstViewController
+    private let firstViewController: UIViewController
     
     private let secondNavController: UINavigationController
     private let secondViewController: SecondViewController
@@ -26,7 +26,8 @@ internal final class MainRouter
     internal init() {
         self.tabbar = UITabBarController()
         
-        self.firstViewController = FirstViewController()
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        self.firstViewController = storyBoard.instantiateViewController(withIdentifier: "FirstViewController")
         self.firstNavController = UINavigationController(rootViewController: self.firstViewController)
         
         self.secondViewController = SecondViewController()
