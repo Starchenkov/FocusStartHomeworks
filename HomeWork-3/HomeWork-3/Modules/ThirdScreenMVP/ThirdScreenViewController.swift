@@ -7,10 +7,9 @@
 
 import UIKit
 
-internal final class ThirdViewController: UIViewController
+internal final class ThirdScreenViewController: UIViewController, ThirdScreenViewProtocol
 {
-    
-    internal var handler: (() -> (Void))? = nil
+    var presentor: ThirdScreenPresenterProtocol
     
     private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
@@ -59,11 +58,31 @@ internal final class ThirdViewController: UIViewController
         return button
     }()
     
+    private let changeDataButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Изменить данные", for: .normal)
+        button.backgroundColor = .systemBlue
+        button.layer.cornerRadius = 15
+        button.clipsToBounds = true
+        button.addTarget(self, action: #selector(didTapChangeDataButton), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    init(with presentor: ThirdScreenPresenterProtocol) {
+        self.presentor = presentor
+        super.init(nibName: nil, bundle: nil)
+        presentor.didLoad(view: self)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         LoggerVC.viewDidLoadPrint(String(describing: type(of: self)))
         configureUI()
-        setInfo()
         animationImage()
     }
     
@@ -110,15 +129,22 @@ internal final class ThirdViewController: UIViewController
             make.width.equalTo(scrollView.snp.width).multipliedBy(0.5)
             make.centerX.equalTo(scrollView.snp.centerX)
             make.top.equalTo(hobbyPlannedLable.snp.bottom).offset(15)
+        }
+        
+        scrollView.addSubview(changeDataButton)
+        changeDataButton.snp.makeConstraints { (make) in
+            make.width.equalTo(scrollView.snp.width).multipliedBy(0.5)
+            make.centerX.equalTo(scrollView.snp.centerX)
+            make.top.equalTo(tableButton.snp.bottom).offset(15)
             make.bottom.equalTo(scrollView.snp.bottom).offset(-10)
         }
     }
     
-    private func setInfo() {
-        hobbyImageView.image = UIImage(named: Constants.hobbyImageName)
-        hobbyNameLabel.text = Constants.hobbyName
-        hobbyDescriptionLabel.text = Constants.hobbyDescription
-        hobbyPlannedLable.text = Constants.hobbyPlanned
+    func setInfo(hobbyInfo: HobbyInfo) {
+        hobbyImageView.image = UIImage(named: hobbyInfo.hobbyImageName)
+        hobbyNameLabel.text = hobbyInfo.hobbyName
+        hobbyDescriptionLabel.text = hobbyInfo.hobbyDescription
+        hobbyPlannedLable.text = hobbyInfo.hobbyPlanned
     }
     
     private func animationImage() {
@@ -132,13 +158,16 @@ internal final class ThirdViewController: UIViewController
     }
     
     @objc func tableButtonClicked(sender:UIButton) {
-        guard let handler = self.handler else { return }
-        handler()
+        self.presentor.tapShowTableButton()
+    }
+    
+    @objc private func didTapChangeDataButton(sender: UIButton) {
+        self.presentor.tapChangeModelButton()
     }
 }
 
 // MARK: LoggerVC
-extension ThirdViewController {
+extension ThirdScreenViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

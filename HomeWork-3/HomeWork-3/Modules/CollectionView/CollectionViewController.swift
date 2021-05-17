@@ -9,7 +9,6 @@ import UIKit
 
 internal final class CollectionViewController: UIViewController
 {
-    
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     private var quoteArray = [Quote]()
     

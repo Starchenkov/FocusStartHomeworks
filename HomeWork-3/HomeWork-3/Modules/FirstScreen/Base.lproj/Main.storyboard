@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Second View Controller-->
+        <!--Second Screen View Controller-->
         <scene sceneID="EJp-Hg-1oX">
             <objects>
-                <viewController id="xzM-nB-z50" customClass="SecondViewController" customModule="HomeWork_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xzM-nB-z50" customClass="SecondScreenViewController" customModule="HomeWork_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nma-bv-m1x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="1941" y="-6"/>
         </scene>
-        <!--Third View Controller-->
+        <!--View Controller-->
         <scene sceneID="rqq-sk-M68">
             <objects>
-                <viewController id="JcP-Z2-8U9" customClass="ThirdViewController" customModule="HomeWork_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JcP-Z2-8U9" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yPr-kF-2Rm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

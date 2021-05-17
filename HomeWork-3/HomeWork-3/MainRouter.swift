@@ -15,14 +15,14 @@ internal final class MainRouter
     private let firstViewController: UIViewController
     
     private let secondNavController: UINavigationController
-    private let secondViewController: SecondViewController
+    private let secondScreenViewController: SecondScreenViewController
     private let collectionViewController: CollectionViewController
     
+    private let thirdScreenPresentor: ThirdScreenPresenterProtocol
     private let thirdNavController: UINavigationController
-    private let thirdViewController: ThirdViewController
+    private let thirdViewController: ThirdScreenViewController
     private let quoteViewController: QuoteViewController
-    
-    
+
     internal init() {
         self.tabbar = UITabBarController()
         
@@ -30,11 +30,12 @@ internal final class MainRouter
         self.firstViewController = storyBoard.instantiateViewController(withIdentifier: "FirstViewController")
         self.firstNavController = UINavigationController(rootViewController: self.firstViewController)
         
-        self.secondViewController = SecondViewController()
-        self.secondNavController = UINavigationController(rootViewController: self.secondViewController)
+        self.secondScreenViewController = SecondScreenViewController()
+        self.secondNavController = UINavigationController(rootViewController: self.secondScreenViewController)
         self.collectionViewController = CollectionViewController()
         
-        self.thirdViewController = ThirdViewController()
+        self.thirdScreenPresentor = ThirdScreenPresenter()
+        self.thirdViewController = ThirdScreenViewController(with: thirdScreenPresentor)
         self.thirdNavController = UINavigationController(rootViewController: self.thirdViewController)
         self.quoteViewController = QuoteViewController()
         
@@ -67,18 +68,18 @@ internal final class MainRouter
         self.secondNavController.navigationBar.topItem?.titleView = label
         self.secondNavController.tabBarItem.title = "iOS"
         self.secondNavController.tabBarItem.image = UIImage(systemName: "keyboard")
-        self.secondViewController.handler = {
+        self.secondScreenViewController.navigationCollectionButtonHandler = {
             self.secondNavController.present(self.collectionViewController, animated: true)
         }
     }
-    
+
     private func configThirdViewController() {
         let label = UILabel()
         label.text = "Hobby"
         self.thirdNavController.navigationBar.topItem?.titleView = label
         self.thirdNavController.tabBarItem.title = "Hobby"
         self.thirdNavController.tabBarItem.image = UIImage(systemName: "sportscourt")
-        self.thirdViewController.handler = {
+        self.thirdScreenPresentor.navTableHandler = {
             self.thirdNavController.pushViewController(self.quoteViewController, animated: true)
         }
     }
