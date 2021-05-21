@@ -6,5 +6,5 @@
 //
 
 protocol ThirdScreenViewProtocol: AnyObject {
-    func setInfo(hobbyInfo: HobbyInfo)
+    func setInfo(with model: ThirdScreenModel)
 }

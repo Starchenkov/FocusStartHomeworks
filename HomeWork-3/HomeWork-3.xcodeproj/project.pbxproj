@@ -76,6 +76,7 @@
 		20A1E7DC263FC0EE00DAB620 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A1E7DB263FC0EE00DAB620 /* Constants.swift */; };
 		20B56A22264FA58E007EC394 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B56A21264FA58E007EC394 /* DataModel.swift */; };
 		20B56A2D264FA9BB007EC394 /* SecondScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B56A2C264FA9BB007EC394 /* SecondScreenView.swift */; };
+		20CAC6E12657F80300C518AD /* ThirdScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CAC6E02657F80300C518AD /* ThirdScreenModel.swift */; };
 		20CDEC0E2649A12A00685981 /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CDEC0D2649A12A00685981 /* QuoteViewController.swift */; };
 		20EBD5A9264A11C300221AB8 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EBD5A8264A11C300221AB8 /* Quote.swift */; };
 		20EBD5AC264A168700221AB8 /* QuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EBD5AB264A168700221AB8 /* QuoteTableViewCell.swift */; };
@@ -184,6 +185,7 @@
 		20A1E7DB263FC0EE00DAB620 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		20B56A21264FA58E007EC394 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		20B56A2C264FA9BB007EC394 /* SecondScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenView.swift; sourceTree = "<group>"; };
+		20CAC6E02657F80300C518AD /* ThirdScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreenModel.swift; sourceTree = "<group>"; };
 		20CDEC0D2649A12A00685981 /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
 		20EBD5A8264A11C300221AB8 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		20EBD5AB264A168700221AB8 /* QuoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewCell.swift; sourceTree = "<group>"; };
@@ -419,6 +421,7 @@
 				203D1C55265205C500AC5100 /* ThirdScreenPresenter.swift */,
 				203D1C58265205F100AC5100 /* ThirdScreenViewProtocol.swift */,
 				203D1C5B2652060700AC5100 /* ThirdScreenPresenterProtocol.swift */,
+				20CAC6E02657F80300C518AD /* ThirdScreenModel.swift */,
 			);
 			path = ThirdScreenMVP;
 			sourceTree = "<group>";
@@ -649,6 +652,7 @@
 				2051D82D26404FE800FF84F3 /* ConstraintMakerExtendable.swift in Sources */,
 				20201457263EF54100C57EBD /* FirstViewController.swift in Sources */,
 				2051D82C26404FE800FF84F3 /* ConstraintDSL.swift in Sources */,
+				20CAC6E12657F80300C518AD /* ThirdScreenModel.swift in Sources */,
 				2051D84126404FE800FF84F3 /* ConstraintRelatableTarget.swift in Sources */,
 				20EBD5AC264A168700221AB8 /* QuoteTableViewCell.swift in Sources */,
 				2051D84326404FE800FF84F3 /* ConstraintLayoutGuide+Extensions.swift in Sources */,

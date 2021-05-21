@@ -86,6 +86,13 @@ internal final class ThirdScreenViewController: UIViewController, ThirdScreenVie
         animationImage()
     }
     
+    func setInfo(with model: ThirdScreenModel) {
+        hobbyImageView.image = UIImage(named: model.imageName)
+        hobbyNameLabel.text = model.titleName
+        hobbyDescriptionLabel.text = model.description
+        hobbyPlannedLable.text = model.plans
+    }
+    
     private func configureUI() {
         view.backgroundColor = .white
         view.addSubview(scrollView)
@@ -140,13 +147,6 @@ internal final class ThirdScreenViewController: UIViewController, ThirdScreenVie
         }
     }
     
-    func setInfo(hobbyInfo: HobbyInfo) {
-        hobbyImageView.image = UIImage(named: hobbyInfo.hobbyImageName)
-        hobbyNameLabel.text = hobbyInfo.hobbyName
-        hobbyDescriptionLabel.text = hobbyInfo.hobbyDescription
-        hobbyPlannedLable.text = hobbyInfo.hobbyPlanned
-    }
-    
     private func animationImage() {
         UIImageView.animate(withDuration: 1.0, delay: 2.0,
                             options: .curveEaseInOut,
@@ -157,7 +157,7 @@ internal final class ThirdScreenViewController: UIViewController, ThirdScreenVie
         )
     }
     
-    @objc func tableButtonClicked(sender:UIButton) {
+    @objc private func tableButtonClicked(sender:UIButton) {
         self.presentor.tapShowTableButton()
     }
     

@@ -20,12 +20,16 @@ class ThirdScreenPresenter: ThirdScreenPresenterProtocol {
     }
     
     func showView() {
-        let hobbyInfo = self.convertDataModel(model: model)
-        thirdScreenView?.setInfo(hobbyInfo: hobbyInfo)
+        let thirdScreenModel = self.convertDataModel(model: model)
+        thirdScreenView?.setInfo(with: thirdScreenModel)
     }
     
-    internal func convertDataModel(model: DataModel) -> HobbyInfo {
-        return model.hobbyInfo
+    private func convertDataModel(model: DataModel) -> ThirdScreenModel {
+        let screenModel = ThirdScreenModel(imageName: model.hobbyInfo.hobbyImageName,
+                                           titleName: model.hobbyInfo.hobbyName,
+                                           description: model.hobbyInfo.hobbyDescription,
+                                           plans: model.hobbyInfo.hobbyPlanned)
+        return screenModel
     }
     
     private func changeDataModel() {

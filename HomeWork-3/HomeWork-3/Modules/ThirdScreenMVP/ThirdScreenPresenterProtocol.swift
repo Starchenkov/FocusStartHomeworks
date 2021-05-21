@@ -7,7 +7,6 @@
 
 protocol ThirdScreenPresenterProtocol: AnyObject {
     var navTableHandler: (() -> (Void))? { get set }
-    func convertDataModel(model: DataModel) -> HobbyInfo
     func didLoad(view: ThirdScreenViewProtocol)
     func showView()
     func tapShowTableButton()
