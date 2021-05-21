@@ -50,7 +50,7 @@ internal final class CollectionViewCell: UICollectionViewCell
         }
     }
     
-    func config(with quote:Quote) {
+    func config(with quote: QuoteInfo) {
         self.nameLable.text = quote.quoteAutor
         self.imageView.image = UIImage(named: quote.quoteImage)
     }

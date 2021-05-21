@@ -10,12 +10,11 @@ import UIKit
 internal final class CollectionViewController: UIViewController
 {
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
-    private var quoteArray = [Quote]()
+    private var quoteArray = [QuoteInfo]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         LoggerVC.viewDidLoadPrint(String(describing: type(of: self)))
-        self.initialize()
         configureCollection()
     }
     
@@ -30,7 +29,7 @@ internal final class CollectionViewController: UIViewController
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
-        
+        self.initialize()
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { (make) in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(10)
@@ -41,7 +40,7 @@ internal final class CollectionViewController: UIViewController
     }
     
     private func initialize() {
-        quoteArray = DataManager.getData()
+        quoteArray = DataModel.init().quoteInfo
     }
 }
 

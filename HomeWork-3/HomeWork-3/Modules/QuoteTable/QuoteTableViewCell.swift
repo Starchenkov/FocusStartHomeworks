@@ -7,7 +7,7 @@
 
 import UIKit
 
-final internal class QuoteTableViewCell: UITableViewCell
+final internal class QuoteTableViewCell: UITableViewCell, QuoteCellViewProtocol
 {
     static let identifier = "QuoteTableViewCell"
     
@@ -30,7 +30,16 @@ final internal class QuoteTableViewCell: UITableViewCell
         return image
     }()
     
-    private func addConstraints() {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        configureUI()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func configureUI() {
         self.selectionStyle = .none
         self.contentView.addSubview(quoteTextLabel)
         self.contentView.addSubview(autorTextLable)
@@ -52,10 +61,9 @@ final internal class QuoteTableViewCell: UITableViewCell
         }
     }
     
-    func config(with quote:Quote) {
-        self.addConstraints()
-        self.quoteTextLabel.text = quote.quoteText
-        self.autorTextLable.text = quote.quoteAutor
-        self.imageQuote.image = UIImage(named: quote.quoteImage)
+    func set(model: QuoteCellModel) {
+        self.quoteTextLabel.text = model.text
+        self.autorTextLable.text = model.autor
+        self.imageQuote.image = UIImage(named: model.image)
     }
 }

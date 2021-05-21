@@ -4,20 +4,20 @@
 //
 //  Created by Sergey Starchenkov on 11.05.2021.
 //
-
+import Foundation
 import UIKit
 
 final internal class QuoteViewController: UIViewController
 {
     
     private var tableView = UITableView()
-    private var quoteArray = [Quote]()
+    private var quoteArray = [QuoteInfo]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         LoggerVC.viewDidLoadPrint(String(describing: type(of: self)))
-        self.initialize()
         self.configureTable()
+        self.initialize()
     }
     
     private func configureTable() {
@@ -34,7 +34,7 @@ final internal class QuoteViewController: UIViewController
     }
     
     private func initialize() {
-        quoteArray = DataManager.getData()
+        quoteArray = DataModel.init().quoteInfo
     }
 }
 
@@ -46,7 +46,9 @@ extension QuoteViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: QuoteTableViewCell.identifier, for: indexPath) as! QuoteTableViewCell
-        cell.config(with: quoteArray[indexPath.row])
+       
+        let _ = QuoteCellPresenter(model: quoteArray[indexPath.row], cellView: cell)
+        
         return cell
     }
     

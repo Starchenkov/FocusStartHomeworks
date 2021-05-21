@@ -5,7 +5,7 @@
 //  Created by Sergey Starchenkov on 11.05.2021.
 //
 
-struct Quote
+struct QuoteInfo
 {
     let quoteText: String
     let quoteAutor: String

@@ -72,13 +72,14 @@
 		2051D84526404FE800FF84F3 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2051D80826404FE800FF84F3 /* ConstraintLayoutSupportDSL.swift */; };
 		2051D84626404FE800FF84F3 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2051D80926404FE800FF84F3 /* ConstraintMakerRelatable.swift */; };
 		2051D84726404FE800FF84F3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2051D80A26404FE800FF84F3 /* README.md */; };
-		207E3B10264A8EE800AE1D2E /* QuoteDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207E3B0F264A8EE800AE1D2E /* QuoteDataModel.swift */; };
+		206082052658141E0094B513 /* QuoteCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206082042658141E0094B513 /* QuoteCellModel.swift */; };
+		20608209265818290094B513 /* QuoteCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20608208265818290094B513 /* QuoteCellPresenter.swift */; };
 		20A1E7DC263FC0EE00DAB620 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A1E7DB263FC0EE00DAB620 /* Constants.swift */; };
 		20B56A22264FA58E007EC394 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B56A21264FA58E007EC394 /* DataModel.swift */; };
 		20B56A2D264FA9BB007EC394 /* SecondScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B56A2C264FA9BB007EC394 /* SecondScreenView.swift */; };
 		20CAC6E12657F80300C518AD /* ThirdScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CAC6E02657F80300C518AD /* ThirdScreenModel.swift */; };
 		20CDEC0E2649A12A00685981 /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CDEC0D2649A12A00685981 /* QuoteViewController.swift */; };
-		20EBD5A9264A11C300221AB8 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EBD5A8264A11C300221AB8 /* Quote.swift */; };
+		20EBD5A9264A11C300221AB8 /* QuoteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EBD5A8264A11C300221AB8 /* QuoteInfo.swift */; };
 		20EBD5AC264A168700221AB8 /* QuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EBD5AB264A168700221AB8 /* QuoteTableViewCell.swift */; };
 		20EBD5B0264A2D2D00221AB8 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EBD5AF264A2D2D00221AB8 /* CollectionViewController.swift */; };
 		20EBD5B3264A332400221AB8 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EBD5B2264A332400221AB8 /* CollectionViewCell.swift */; };
@@ -181,13 +182,14 @@
 		2051D80826404FE800FF84F3 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		2051D80926404FE800FF84F3 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
 		2051D80A26404FE800FF84F3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		207E3B0F264A8EE800AE1D2E /* QuoteDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDataModel.swift; sourceTree = "<group>"; };
+		206082042658141E0094B513 /* QuoteCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCellModel.swift; sourceTree = "<group>"; };
+		20608208265818290094B513 /* QuoteCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCellPresenter.swift; sourceTree = "<group>"; };
 		20A1E7DB263FC0EE00DAB620 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		20B56A21264FA58E007EC394 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		20B56A2C264FA9BB007EC394 /* SecondScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenView.swift; sourceTree = "<group>"; };
 		20CAC6E02657F80300C518AD /* ThirdScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreenModel.swift; sourceTree = "<group>"; };
 		20CDEC0D2649A12A00685981 /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
-		20EBD5A8264A11C300221AB8 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		20EBD5A8264A11C300221AB8 /* QuoteInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteInfo.swift; sourceTree = "<group>"; };
 		20EBD5AB264A168700221AB8 /* QuoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewCell.swift; sourceTree = "<group>"; };
 		20EBD5AF264A2D2D00221AB8 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		20EBD5B2264A332400221AB8 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -429,20 +431,12 @@
 		20B56A28264FA8DD007EC394 /* QuoteTable */ = {
 			isa = PBXGroup;
 			children = (
-				20B56A29264FA8F4007EC394 /* View */,
-				20EBD5A8264A11C300221AB8 /* Quote.swift */,
+				20EBD5AB264A168700221AB8 /* QuoteTableViewCell.swift */,
+				20608208265818290094B513 /* QuoteCellPresenter.swift */,
 				20CDEC0D2649A12A00685981 /* QuoteViewController.swift */,
-				207E3B0F264A8EE800AE1D2E /* QuoteDataModel.swift */,
+				206082042658141E0094B513 /* QuoteCellModel.swift */,
 			);
 			path = QuoteTable;
-			sourceTree = "<group>";
-		};
-		20B56A29264FA8F4007EC394 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				20EBD5AB264A168700221AB8 /* QuoteTableViewCell.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		20B56A31264FBA13007EC394 /* App */ = {
@@ -472,6 +466,7 @@
 				20B56A21264FA58E007EC394 /* DataModel.swift */,
 				20FB40D326516E2D006836CE /* IOSDevInfo.swift */,
 				20FB40D826516E5F006836CE /* HobbyInfo.swift */,
+				20EBD5A8264A11C300221AB8 /* QuoteInfo.swift */,
 				20FB40CE26516E07006836CE /* DataModelProtocol.swift */,
 			);
 			name = Model;
@@ -657,10 +652,12 @@
 				20EBD5AC264A168700221AB8 /* QuoteTableViewCell.swift in Sources */,
 				2051D84326404FE800FF84F3 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
 				20B56A22264FA58E007EC394 /* DataModel.swift in Sources */,
-				20EBD5A9264A11C300221AB8 /* Quote.swift in Sources */,
+				20EBD5A9264A11C300221AB8 /* QuoteInfo.swift in Sources */,
 				2051D84626404FE800FF84F3 /* ConstraintMakerRelatable.swift in Sources */,
+				20608209265818290094B513 /* QuoteCellPresenter.swift in Sources */,
 				2020146D263EF6D000C57EBD /* ThirdScreenViewController.swift in Sources */,
 				20EBD5C0264A57DE00221AB8 /* MainRouter.swift in Sources */,
+				206082052658141E0094B513 /* QuoteCellModel.swift in Sources */,
 				2051D83A26404FE800FF84F3 /* ConstraintMaker.swift in Sources */,
 				20201453263EF54100C57EBD /* AppDelegate.swift in Sources */,
 				2051D84426404FE800FF84F3 /* ConstraintDirectionalInsets.swift in Sources */,
@@ -693,7 +690,6 @@
 				2051D83126404FE800FF84F3 /* ConstraintConfig.swift in Sources */,
 				2051D82F26404FE800FF84F3 /* ConstraintInsetTarget.swift in Sources */,
 				2051D82626404FE800FF84F3 /* ConstraintMakerPriortizable.swift in Sources */,
-				207E3B10264A8EE800AE1D2E /* QuoteDataModel.swift in Sources */,
 				2051D83D26404FE800FF84F3 /* ConstraintView+Extensions.swift in Sources */,
 				2051D83F26404FE800FF84F3 /* Constraint.swift in Sources */,
 				20EBD5B0264A2D2D00221AB8 /* CollectionViewController.swift in Sources */,
