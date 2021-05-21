@@ -6,24 +6,26 @@
 //
 
 import UIKit
-import SnapKit
 
-class ThirdViewController: UIViewController {
+internal final class ThirdViewController: UIViewController
+{
     
-    let scrollView: UIScrollView = {
+    internal var handler: (() -> (Void))? = nil
+    
+    private let scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.backgroundColor = .white
         return scrollView
     }()
     
-    let hobbyImageView: UIImageView = {
+    private let hobbyImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.layer.masksToBounds = true
         imageView.layer.cornerRadius = 35
         return imageView
     }()
     
-    let hobbyNameLabel: UILabel = {
+    private let hobbyNameLabel: UILabel = {
         let label = UILabel()
         label.sizeToFit()
         label.numberOfLines = 0
@@ -31,7 +33,7 @@ class ThirdViewController: UIViewController {
         return label
     }()
     
-    let hobbyDescriptionLabel: UILabel = {
+    private let hobbyDescriptionLabel: UILabel = {
         let label = UILabel()
         label.sizeToFit()
         label.textColor = .gray
@@ -39,7 +41,7 @@ class ThirdViewController: UIViewController {
         return label
     }()
     
-    let hobbyPlannedLable: UILabel = {
+    private let hobbyPlannedLable: UILabel = {
         let label = UILabel()
         label.sizeToFit()
         label.textColor = .red
@@ -47,14 +49,26 @@ class ThirdViewController: UIViewController {
         return label
     }()
     
+    private let tableButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Таблица", for: .normal)
+        button.backgroundColor = .systemBlue
+        button.layer.cornerRadius = 15
+        button.clipsToBounds = true
+        button.addTarget(self, action: #selector(tableButtonClicked), for: .touchUpInside)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        LoggerVC.viewDidLoadPrint(String(describing: type(of: self)))
         configureUI()
         setInfo()
         animationImage()
     }
     
-    func configureUI() {
+    private func configureUI() {
+        view.backgroundColor = .white
         view.addSubview(scrollView)
         scrollView.snp.makeConstraints { (make) in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.topMargin)
@@ -62,14 +76,14 @@ class ThirdViewController: UIViewController {
             make.leading.equalTo(view.safeAreaLayoutGuide.snp.leadingMargin)
             make.trailing.equalTo(view.safeAreaLayoutGuide.snp.trailingMargin)
         }
-
+        
         scrollView.addSubview(hobbyImageView)
         hobbyImageView.snp.makeConstraints { (make) in
             make.centerX.equalTo(scrollView.snp.centerX)
             make.top.equalTo(scrollView.snp.top).offset(5)
             make.width.height.equalTo(scrollView.snp.width).multipliedBy(0.9)
         }
-
+        
         scrollView.addSubview(hobbyNameLabel)
         hobbyNameLabel.snp.makeConstraints { (make) in
             make.centerX.equalTo(scrollView.snp.centerX)
@@ -89,18 +103,25 @@ class ThirdViewController: UIViewController {
             make.top.equalTo(hobbyDescriptionLabel.snp.bottom).offset(10)
             make.left.equalTo(scrollView.snp.left).offset(10)
             make.width.equalTo(scrollView.snp.width).multipliedBy(0.9)
-            make.bottom.equalTo(scrollView.snp.bottom).offset(-5)
+        }
+        
+        scrollView.addSubview(tableButton)
+        tableButton.snp.makeConstraints { (make) in
+            make.width.equalTo(scrollView.snp.width).multipliedBy(0.5)
+            make.centerX.equalTo(scrollView.snp.centerX)
+            make.top.equalTo(hobbyPlannedLable.snp.bottom).offset(15)
+            make.bottom.equalTo(scrollView.snp.bottom).offset(-10)
         }
     }
     
-    func setInfo() {
+    private func setInfo() {
         hobbyImageView.image = UIImage(named: Constants.hobbyImageName)
         hobbyNameLabel.text = Constants.hobbyName
         hobbyDescriptionLabel.text = Constants.hobbyDescription
         hobbyPlannedLable.text = Constants.hobbyPlanned
     }
     
-    func animationImage() {
+    private func animationImage() {
         UIImageView.animate(withDuration: 1.0, delay: 2.0,
                             options: .curveEaseInOut,
                             animations: {
@@ -108,5 +129,34 @@ class ThirdViewController: UIViewController {
                             },
                             completion: nil
         )
+    }
+    
+    @objc func tableButtonClicked(sender:UIButton) {
+        guard let handler = self.handler else { return }
+        handler()
+    }
+}
+
+// MARK: LoggerVC
+extension ThirdViewController {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        LoggerVC.viewWillAppearPrint(String(describing: type(of: self)))
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        LoggerVC.viewDidAppearPrint(String(describing: type(of: self)))
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        LoggerVC.viewWillDisappearPrint(String(describing: type(of: self)))
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        LoggerVC.viewDidDisappear(String(describing: type(of: self)))
     }
 }
