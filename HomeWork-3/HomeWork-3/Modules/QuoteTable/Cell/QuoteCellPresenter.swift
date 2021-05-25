@@ -10,17 +10,17 @@ protocol QuoteCellViewProtocol: AnyObject {
     func set(model: QuoteCellModel)
 }
 
-class QuoteCellPresenter {
+class QuoteCellPresenter
+{
     private var model: QuoteInfo
     private weak var cellView: QuoteCellViewProtocol?
     
-    init(model: QuoteInfo, cellView: QuoteCellViewProtocol) {
+    init(model: QuoteInfo) {
         self.model = model
-        self.cellView = cellView
-        self.viewIsLoad()
     }
     
-    private func viewIsLoad() {
+    func viewIsLoaded(cellView: QuoteCellViewProtocol) {
+        self.cellView = cellView
         let modelCell = converterData(model: model)
         self.cellView?.set(model: modelCell)
     }

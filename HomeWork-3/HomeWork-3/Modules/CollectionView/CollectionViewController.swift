@@ -7,14 +7,13 @@
 
 import UIKit
 
-internal final class CollectionViewController: UIViewController
+internal final class CollectionViewController: LoggerViewController
 {
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     private var quoteArray = [QuoteInfo]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        LoggerVC.viewDidLoadPrint(String(describing: type(of: self)))
         configureCollection()
     }
     
@@ -59,29 +58,5 @@ extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let size = UIScreen.main.bounds.width - 16
         return CGSize(width: size, height: size)
-    }
-}
-
-// MARK: LoggerVC
-extension CollectionViewController {
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        LoggerVC.viewWillAppearPrint(String(describing: type(of: self)))
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        LoggerVC.viewDidAppearPrint(String(describing: type(of: self)))
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        LoggerVC.viewWillDisappearPrint(String(describing: type(of: self)))
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        LoggerVC.viewDidDisappear(String(describing: type(of: self)))
     }
 }

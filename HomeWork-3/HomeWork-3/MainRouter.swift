@@ -21,7 +21,7 @@ internal final class MainRouter
     private let thirdScreenPresentor: ThirdScreenPresenterProtocol
     private let thirdNavController: UINavigationController
     private let thirdViewController: ThirdScreenViewController
-    private let quoteViewController: QuoteViewController
+    private let quoteViewController: QuoteViewController?
 
     internal init() {
         self.tabbar = UITabBarController()
@@ -37,7 +37,7 @@ internal final class MainRouter
         self.thirdScreenPresentor = ThirdScreenPresenter()
         self.thirdViewController = ThirdScreenViewController(with: thirdScreenPresentor)
         self.thirdNavController = UINavigationController(rootViewController: self.thirdViewController)
-        self.quoteViewController = QuoteViewController()
+        self.quoteViewController = nil
         
         self.configFirstViewController()
         self.configSecondViewController()
@@ -80,7 +80,10 @@ internal final class MainRouter
         self.thirdNavController.tabBarItem.title = "Hobby"
         self.thirdNavController.tabBarItem.image = UIImage(systemName: "sportscourt")
         self.thirdScreenPresentor.navTableHandler = {
-            self.thirdNavController.pushViewController(self.quoteViewController, animated: true)
+            let model = DataModel()
+            let presenter = QuotePresenter(model: model)
+            let quoteViewController = QuoteViewController(presenter: presenter)
+            self.thirdNavController.pushViewController(quoteViewController, animated: true)
         }
     }
 }

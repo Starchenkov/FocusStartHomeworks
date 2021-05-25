@@ -8,4 +8,5 @@
 protocol DataModelProtocol {
     var iosInfo: IOSDevInfo { get }
     var hobbyInfo: HobbyInfo { get }
+    var quoteInfo: [QuoteInfo] { get }
 }

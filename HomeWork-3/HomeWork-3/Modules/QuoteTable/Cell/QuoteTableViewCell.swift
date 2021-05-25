@@ -7,7 +7,7 @@
 
 import UIKit
 
-final internal class QuoteTableViewCell: UITableViewCell, QuoteCellViewProtocol
+final internal class QuoteTableViewCell: UITableViewCell
 {
     static let identifier = "QuoteTableViewCell"
     
@@ -60,7 +60,10 @@ final internal class QuoteTableViewCell: UITableViewCell, QuoteCellViewProtocol
             make.left.equalTo(imageQuote.snp.right).offset(10)
         }
     }
-    
+}
+
+extension QuoteTableViewCell: QuoteCellViewProtocol
+{
     func set(model: QuoteCellModel) {
         self.quoteTextLabel.text = model.text
         self.autorTextLable.text = model.autor

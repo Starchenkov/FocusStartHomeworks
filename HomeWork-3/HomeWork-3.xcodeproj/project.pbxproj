@@ -74,6 +74,8 @@
 		2051D84726404FE800FF84F3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2051D80A26404FE800FF84F3 /* README.md */; };
 		206082052658141E0094B513 /* QuoteCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206082042658141E0094B513 /* QuoteCellModel.swift */; };
 		20608209265818290094B513 /* QuoteCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20608208265818290094B513 /* QuoteCellPresenter.swift */; };
+		2071F4DF265B7783001D68C6 /* QuotePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2071F4DE265B7783001D68C6 /* QuotePresenter.swift */; };
+		2071F4E3265B7A1D001D68C6 /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2071F4E2265B7A1D001D68C6 /* QuoteView.swift */; };
 		20A1E7DC263FC0EE00DAB620 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A1E7DB263FC0EE00DAB620 /* Constants.swift */; };
 		20B56A22264FA58E007EC394 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B56A21264FA58E007EC394 /* DataModel.swift */; };
 		20B56A2D264FA9BB007EC394 /* SecondScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B56A2C264FA9BB007EC394 /* SecondScreenView.swift */; };
@@ -88,7 +90,6 @@
 		20FB40CF26516E07006836CE /* DataModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FB40CE26516E07006836CE /* DataModelProtocol.swift */; };
 		20FB40D426516E2D006836CE /* IOSDevInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FB40D326516E2D006836CE /* IOSDevInfo.swift */; };
 		20FB40D926516E5F006836CE /* HobbyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FB40D826516E5F006836CE /* HobbyInfo.swift */; };
-		B4DA15581398A7EFFF449BC1 /* Pods_HomeWork_3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 238EB2AAB368F37587EC1FC0 /* Pods_HomeWork_3.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +185,8 @@
 		2051D80A26404FE800FF84F3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		206082042658141E0094B513 /* QuoteCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCellModel.swift; sourceTree = "<group>"; };
 		20608208265818290094B513 /* QuoteCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCellPresenter.swift; sourceTree = "<group>"; };
+		2071F4DE265B7783001D68C6 /* QuotePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotePresenter.swift; sourceTree = "<group>"; };
+		2071F4E2265B7A1D001D68C6 /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
 		20A1E7DB263FC0EE00DAB620 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		20B56A21264FA58E007EC394 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		20B56A2C264FA9BB007EC394 /* SecondScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenView.swift; sourceTree = "<group>"; };
@@ -208,7 +211,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4DA15581398A7EFFF449BC1 /* Pods_HomeWork_3.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +388,16 @@
 			path = Headers;
 			sourceTree = "<group>";
 		};
+		2071F4DB265B7747001D68C6 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				20EBD5AB264A168700221AB8 /* QuoteTableViewCell.swift */,
+				20608208265818290094B513 /* QuoteCellPresenter.swift */,
+				206082042658141E0094B513 /* QuoteCellModel.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		20B56A1A264FA4D5007EC394 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -431,10 +443,10 @@
 		20B56A28264FA8DD007EC394 /* QuoteTable */ = {
 			isa = PBXGroup;
 			children = (
-				20EBD5AB264A168700221AB8 /* QuoteTableViewCell.swift */,
-				20608208265818290094B513 /* QuoteCellPresenter.swift */,
+				2071F4DB265B7747001D68C6 /* Cell */,
+				2071F4E2265B7A1D001D68C6 /* QuoteView.swift */,
 				20CDEC0D2649A12A00685981 /* QuoteViewController.swift */,
-				206082042658141E0094B513 /* QuoteCellModel.swift */,
+				2071F4DE265B7783001D68C6 /* QuotePresenter.swift */,
 			);
 			path = QuoteTable;
 			sourceTree = "<group>";
@@ -662,6 +674,7 @@
 				20201453263EF54100C57EBD /* AppDelegate.swift in Sources */,
 				2051D84426404FE800FF84F3 /* ConstraintDirectionalInsets.swift in Sources */,
 				2051D83226404FE800FF84F3 /* UILayoutSupport+Extensions.swift in Sources */,
+				2071F4E3265B7A1D001D68C6 /* QuoteView.swift in Sources */,
 				2051D83426404FE800FF84F3 /* ConstraintLayoutGuide.swift in Sources */,
 				2051D82E26404FE800FF84F3 /* ConstraintPriority.swift in Sources */,
 				20201455263EF54100C57EBD /* SceneDelegate.swift in Sources */,
@@ -701,6 +714,7 @@
 				2051D82A26404FE800FF84F3 /* ConstraintInsets.swift in Sources */,
 				2051D82726404FE800FF84F3 /* ConstraintAttributes.swift in Sources */,
 				2051D82526404FE800FF84F3 /* ConstraintDescription.swift in Sources */,
+				2071F4DF265B7783001D68C6 /* QuotePresenter.swift in Sources */,
 				2051D82826404FE800FF84F3 /* ConstraintViewDSL.swift in Sources */,
 				20CDEC0E2649A12A00685981 /* QuoteViewController.swift in Sources */,
 				20FB40D926516E5F006836CE /* HobbyInfo.swift in Sources */,

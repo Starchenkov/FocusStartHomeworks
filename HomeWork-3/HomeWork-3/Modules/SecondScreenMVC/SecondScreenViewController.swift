@@ -6,7 +6,7 @@
 //
 import UIKit
 
-class SecondScreenViewController: UIViewController
+class SecondScreenViewController: LoggerViewController
 {
     internal var navigationCollectionButtonHandler: (() -> (Void))?
     
@@ -31,29 +31,5 @@ class SecondScreenViewController: UIViewController
     private func changeDataModel() {
         self.model.iosInfo.iOSDescriptions = "\(Date())"
         self.setInfo()
-    }
-}
-
-// MARK: LoggerVC
-extension SecondScreenViewController {
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        LoggerVC.viewWillAppearPrint(String(describing: type(of: self)))
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        LoggerVC.viewDidAppearPrint(String(describing: type(of: self)))
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        LoggerVC.viewWillDisappearPrint(String(describing: type(of: self)))
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        LoggerVC.viewDidDisappear(String(describing: type(of: self)))
     }
 }

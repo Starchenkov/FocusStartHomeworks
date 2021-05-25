@@ -1,29 +1,35 @@
 //
-//  LoggerVC.swift
+//  LoggerViewController.swift
 //  HomeWork-3
 //
 //  Created by Sergey Starchenkov on 11.05.2021.
 //
+import UIKit
 
-struct LoggerVC
-{
-    static func viewDidLoadPrint(_ nameController: String) {
-        print("\(nameController) viewDidLoad")
+class LoggerViewController: UIViewController {
+    
+    override func loadView() {
+        super.loadView()
+        print(String(describing: type(of: self)) + " \(#function)")
     }
-
-    static func viewWillAppearPrint(_ nameController: String) {
-        print("\(nameController) viewWillAppear")
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print(String(describing: type(of: self)) + " \(#function)")
     }
-
-    static func viewDidAppearPrint(_ nameController: String) {
-        print("\(nameController) viewDidAppear")
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print(String(describing: type(of: self)) + " \(#function)")
     }
-
-    static func viewWillDisappearPrint(_ nameController: String) {
-        print("\(nameController) viewWillDisappear")
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print(String(describing: type(of: self)) + " \(#function)")
     }
-
-    static func viewDidDisappear(_ nameController: String) {
-        print("\(nameController) viewDidDisappear")
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print(String(describing: type(of: self)) + " \(#function)")
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        print(String(describing: type(of: self)) + " \(#function)")
     }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-internal final class ThirdScreenViewController: UIViewController, ThirdScreenViewProtocol
+internal final class ThirdScreenViewController: LoggerViewController, ThirdScreenViewProtocol
 {
     var presentor: ThirdScreenPresenterProtocol
     
@@ -81,7 +81,6 @@ internal final class ThirdScreenViewController: UIViewController, ThirdScreenVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        LoggerVC.viewDidLoadPrint(String(describing: type(of: self)))
         configureUI()
         animationImage()
     }
@@ -163,29 +162,5 @@ internal final class ThirdScreenViewController: UIViewController, ThirdScreenVie
     
     @objc private func didTapChangeDataButton(sender: UIButton) {
         self.presentor.tapChangeModelButton()
-    }
-}
-
-// MARK: LoggerVC
-extension ThirdScreenViewController {
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        LoggerVC.viewWillAppearPrint(String(describing: type(of: self)))
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        LoggerVC.viewDidAppearPrint(String(describing: type(of: self)))
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        LoggerVC.viewWillDisappearPrint(String(describing: type(of: self)))
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        LoggerVC.viewDidDisappear(String(describing: type(of: self)))
     }
 }

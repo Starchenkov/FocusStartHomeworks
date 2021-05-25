@@ -7,12 +7,11 @@
 
 import UIKit
 
-internal final class FirstViewController: UIViewController
+internal final class FirstViewController: LoggerViewController
 {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        LoggerVC.viewDidLoadPrint(String(describing: type(of: self)))
     }
     
     @IBAction func followMeTapped(_ sender: UIButton) {
@@ -23,28 +22,3 @@ internal final class FirstViewController: UIViewController
         self.present(alert, animated: true, completion: nil)
     }
 }
-
-// MARK: LoggerVC
-extension FirstViewController {
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        LoggerVC.viewWillAppearPrint(String(describing: type(of: self)))
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        LoggerVC.viewDidAppearPrint(String(describing: type(of: self)))
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        LoggerVC.viewWillDisappearPrint(String(describing: type(of: self)))
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        LoggerVC.viewDidDisappear(String(describing: type(of: self)))
-    }
-}
-
