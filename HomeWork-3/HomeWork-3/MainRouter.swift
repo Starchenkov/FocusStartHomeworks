@@ -16,12 +16,10 @@ internal final class MainRouter
     
     private let secondNavController: UINavigationController
     private let secondScreenViewController: SecondScreenViewController
-    private let collectionViewController: CollectionViewController
     
     private let thirdScreenPresentor: ThirdScreenPresenterProtocol
     private let thirdNavController: UINavigationController
     private let thirdViewController: ThirdScreenViewController
-    private let quoteViewController: QuoteViewController?
 
     internal init() {
         self.tabbar = UITabBarController()
@@ -32,12 +30,10 @@ internal final class MainRouter
         
         self.secondScreenViewController = SecondScreenViewController()
         self.secondNavController = UINavigationController(rootViewController: self.secondScreenViewController)
-        self.collectionViewController = CollectionViewController()
         
         self.thirdScreenPresentor = ThirdScreenPresenter()
         self.thirdViewController = ThirdScreenViewController(with: thirdScreenPresentor)
         self.thirdNavController = UINavigationController(rootViewController: self.thirdViewController)
-        self.quoteViewController = nil
         
         self.configFirstViewController()
         self.configSecondViewController()
@@ -69,7 +65,10 @@ internal final class MainRouter
         self.secondNavController.tabBarItem.title = "iOS"
         self.secondNavController.tabBarItem.image = UIImage(systemName: "keyboard")
         self.secondScreenViewController.navigationCollectionButtonHandler = {
-            self.secondNavController.present(self.collectionViewController, animated: true)
+            let model = DataModel()
+            let quoteViewModel = QuoteViewModel(model: model)
+            let collectionViewController = CollectionViewController(viewModel: quoteViewModel)
+            self.secondNavController.present(collectionViewController, animated: true)
         }
     }
 

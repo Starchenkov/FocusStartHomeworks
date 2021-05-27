@@ -9,6 +9,14 @@ import UIKit
 
 internal final class CollectionViewCell: UICollectionViewCell
 {
+    weak var viewModel: QuoteCellViewModelProtocol? {
+        willSet (viewModel) {
+            guard let viewModel = viewModel else { return }
+            self.nameLable.text = viewModel.quoteAutor
+            self.imageView.image = UIImage(named: viewModel.quoteImage)
+        }
+    }
+    
     static let identifier = "CollectionViewCell"
     
     private let imageView: UIImageView = {
@@ -48,10 +56,5 @@ internal final class CollectionViewCell: UICollectionViewCell
             make.bottom.equalTo(imageView.snp.bottom).inset(10)
             make.centerX.equalToSuperview()
         }
-    }
-    
-    func config(with quote: QuoteInfo) {
-        self.nameLable.text = quote.quoteAutor
-        self.imageView.image = UIImage(named: quote.quoteImage)
     }
 }

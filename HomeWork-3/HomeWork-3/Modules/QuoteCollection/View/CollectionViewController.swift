@@ -9,8 +9,18 @@ import UIKit
 
 internal final class CollectionViewController: LoggerViewController
 {
+    private var viewModel: QuoteViewModelProtocol
+
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
-    private var quoteArray = [QuoteInfo]()
+
+    init(viewModel: QuoteViewModelProtocol) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +38,6 @@ internal final class CollectionViewController: LoggerViewController
         collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
-        self.initialize()
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { (make) in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(10)
@@ -37,21 +46,18 @@ internal final class CollectionViewController: LoggerViewController
             make.height.equalTo(collectionView.snp.width)
         }
     }
-    
-    private func initialize() {
-        quoteArray = DataModel.init().quoteInfo
-    }
 }
 
 // MARK: CollectionViewDelegate, CollectionViewDataSource
 extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return quoteArray.count
+        return viewModel.numberOfQuotes()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as! CollectionViewCell
-        cell.config(with: quoteArray[indexPath.row])
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as? CollectionViewCell else { return UICollectionViewCell() }
+    
+        cell.viewModel = viewModel.quoteCellViewModel(forIndex: indexPath.row)
         return cell
     }
     

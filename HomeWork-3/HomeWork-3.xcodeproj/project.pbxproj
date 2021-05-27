@@ -15,6 +15,7 @@
 		2020145F263EF54300C57EBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2020145D263EF54300C57EBD /* LaunchScreen.storyboard */; };
 		2020146A263EF6AE00C57EBD /* SecondScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20201469263EF6AE00C57EBD /* SecondScreenViewController.swift */; };
 		2020146D263EF6D000C57EBD /* ThirdScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2020146C263EF6D000C57EBD /* ThirdScreenViewController.swift */; };
+		202AD091265F4AC700BC484D /* QuoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202AD090265F4AC700BC484D /* QuoteViewModel.swift */; };
 		203D1C56265205C500AC5100 /* ThirdScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203D1C55265205C500AC5100 /* ThirdScreenPresenter.swift */; };
 		203D1C59265205F100AC5100 /* ThirdScreenViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203D1C58265205F100AC5100 /* ThirdScreenViewProtocol.swift */; };
 		203D1C5C2652060700AC5100 /* ThirdScreenPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203D1C5B2652060700AC5100 /* ThirdScreenPresenterProtocol.swift */; };
@@ -80,6 +81,7 @@
 		20B56A22264FA58E007EC394 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B56A21264FA58E007EC394 /* DataModel.swift */; };
 		20B56A2D264FA9BB007EC394 /* SecondScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B56A2C264FA9BB007EC394 /* SecondScreenView.swift */; };
 		20CAC6E12657F80300C518AD /* ThirdScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CAC6E02657F80300C518AD /* ThirdScreenModel.swift */; };
+		20CACBE4265F562F006F7ADE /* QuteCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CACBE3265F562F006F7ADE /* QuteCellViewModel.swift */; };
 		20CDEC0E2649A12A00685981 /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CDEC0D2649A12A00685981 /* QuoteViewController.swift */; };
 		20EBD5A9264A11C300221AB8 /* QuoteInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EBD5A8264A11C300221AB8 /* QuoteInfo.swift */; };
 		20EBD5AC264A168700221AB8 /* QuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EBD5AB264A168700221AB8 /* QuoteTableViewCell.swift */; };
@@ -120,6 +122,7 @@
 		20201460263EF54300C57EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20201469263EF6AE00C57EBD /* SecondScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenViewController.swift; sourceTree = "<group>"; };
 		2020146C263EF6D000C57EBD /* ThirdScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreenViewController.swift; sourceTree = "<group>"; };
+		202AD090265F4AC700BC484D /* QuoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewModel.swift; sourceTree = "<group>"; };
 		203D1C55265205C500AC5100 /* ThirdScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreenPresenter.swift; sourceTree = "<group>"; };
 		203D1C58265205F100AC5100 /* ThirdScreenViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreenViewProtocol.swift; sourceTree = "<group>"; };
 		203D1C5B2652060700AC5100 /* ThirdScreenPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreenPresenterProtocol.swift; sourceTree = "<group>"; };
@@ -191,6 +194,7 @@
 		20B56A21264FA58E007EC394 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		20B56A2C264FA9BB007EC394 /* SecondScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenView.swift; sourceTree = "<group>"; };
 		20CAC6E02657F80300C518AD /* ThirdScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreenModel.swift; sourceTree = "<group>"; };
+		20CACBE3265F562F006F7ADE /* QuteCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuteCellViewModel.swift; sourceTree = "<group>"; };
 		20CDEC0D2649A12A00685981 /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
 		20EBD5A8264A11C300221AB8 /* QuoteInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteInfo.swift; sourceTree = "<group>"; };
 		20EBD5AB264A168700221AB8 /* QuoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewCell.swift; sourceTree = "<group>"; };
@@ -254,6 +258,24 @@
 				20EBD5BF264A57DE00221AB8 /* MainRouter.swift */,
 			);
 			path = "HomeWork-3";
+			sourceTree = "<group>";
+		};
+		202AD08E265F4A5B00BC484D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				20EBD5AF264A2D2D00221AB8 /* CollectionViewController.swift */,
+				20EBD5B2264A332400221AB8 /* CollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		202AD08F265F4A6E00BC484D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				202AD090265F4AC700BC484D /* QuoteViewModel.swift */,
+				20CACBE3265F562F006F7ADE /* QuteCellViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		2051D7C626404FE800FF84F3 /* Pods */ = {
@@ -405,7 +427,7 @@
 				20B56A20264FA50C007EC394 /* SecondScreenMVC */,
 				20B56A27264FA8A6007EC394 /* ThirdScreenMVP */,
 				20B56A28264FA8DD007EC394 /* QuoteTable */,
-				20FB40DD26516E8B006836CE /* CollectionView */,
+				20FB40DD26516E8B006836CE /* QuoteCollection */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -484,13 +506,13 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		20FB40DD26516E8B006836CE /* CollectionView */ = {
+		20FB40DD26516E8B006836CE /* QuoteCollection */ = {
 			isa = PBXGroup;
 			children = (
-				20EBD5AF264A2D2D00221AB8 /* CollectionViewController.swift */,
-				20EBD5B2264A332400221AB8 /* CollectionViewCell.swift */,
+				202AD08E265F4A5B00BC484D /* View */,
+				202AD08F265F4A6E00BC484D /* ViewModel */,
 			);
-			path = CollectionView;
+			path = QuoteCollection;
 			sourceTree = "<group>";
 		};
 		ED979675E56510BEECC4BBC2 /* Pods */ = {
@@ -671,12 +693,14 @@
 				20EBD5C0264A57DE00221AB8 /* MainRouter.swift in Sources */,
 				206082052658141E0094B513 /* QuoteCellModel.swift in Sources */,
 				2051D83A26404FE800FF84F3 /* ConstraintMaker.swift in Sources */,
+				202AD091265F4AC700BC484D /* QuoteViewModel.swift in Sources */,
 				20201453263EF54100C57EBD /* AppDelegate.swift in Sources */,
 				2051D84426404FE800FF84F3 /* ConstraintDirectionalInsets.swift in Sources */,
 				2051D83226404FE800FF84F3 /* UILayoutSupport+Extensions.swift in Sources */,
 				2071F4E3265B7A1D001D68C6 /* QuoteView.swift in Sources */,
 				2051D83426404FE800FF84F3 /* ConstraintLayoutGuide.swift in Sources */,
 				2051D82E26404FE800FF84F3 /* ConstraintPriority.swift in Sources */,
+				20CACBE4265F562F006F7ADE /* QuteCellViewModel.swift in Sources */,
 				20201455263EF54100C57EBD /* SceneDelegate.swift in Sources */,
 				20EBD5B3264A332400221AB8 /* CollectionViewCell.swift in Sources */,
 				20FB40CF26516E07006836CE /* DataModelProtocol.swift in Sources */,
