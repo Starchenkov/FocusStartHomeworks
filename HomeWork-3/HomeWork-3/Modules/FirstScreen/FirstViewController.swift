@@ -7,8 +7,9 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
-
+internal final class FirstViewController: LoggerViewController
+{
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
