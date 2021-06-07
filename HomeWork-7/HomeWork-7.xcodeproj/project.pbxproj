@@ -10,7 +10,6 @@
 		20295B262661063200B3D49C /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20295B252661063200B3D49C /* MainPresenter.swift */; };
 		20295B2926610A4E00B3D49C /* MainBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20295B2826610A4E00B3D49C /* MainBuilder.swift */; };
 		20295B2F2661137D00B3D49C /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20295B2E2661137D00B3D49C /* NetworkManger.swift */; };
-		20295B4726612BEF00B3D49C /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20295B4626612BEF00B3D49C /* ImageData.swift */; };
 		20CDC9392660B33E00FFCB53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CDC9382660B33E00FFCB53 /* AppDelegate.swift */; };
 		20CDC93B2660B33E00FFCB53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CDC93A2660B33E00FFCB53 /* SceneDelegate.swift */; };
 		20CDC93D2660B33E00FFCB53 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CDC93C2660B33E00FFCB53 /* MainViewController.swift */; };
@@ -25,7 +24,6 @@
 		20295B252661063200B3D49C /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		20295B2826610A4E00B3D49C /* MainBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBuilder.swift; sourceTree = "<group>"; };
 		20295B2E2661137D00B3D49C /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
-		20295B4626612BEF00B3D49C /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 		20CDC9352660B33E00FFCB53 /* HomeWork-7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HomeWork-7.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20CDC9382660B33E00FFCB53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20CDC93A2660B33E00FFCB53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 		20295B39266113B200B3D49C /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				20295B4426611A1000B3D49C /* Model */,
 				20295B362661139700B3D49C /* View */,
 				20295B332661138A00B3D49C /* Presenter */,
 			);
@@ -126,14 +123,6 @@
 				20CDC9592660C36E00FFCB53 /* ImageTableViewCell.swift */,
 			);
 			name = Cell;
-			sourceTree = "<group>";
-		};
-		20295B4426611A1000B3D49C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				20295B4626612BEF00B3D49C /* ImageData.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		20CDC92C2660B33E00FFCB53 = {
@@ -244,7 +233,6 @@
 				20295B2F2661137D00B3D49C /* NetworkManger.swift in Sources */,
 				20295B2926610A4E00B3D49C /* MainBuilder.swift in Sources */,
 				20CDC93D2660B33E00FFCB53 /* MainViewController.swift in Sources */,
-				20295B4726612BEF00B3D49C /* ImageData.swift in Sources */,
 				20CDC9392660B33E00FFCB53 /* AppDelegate.swift in Sources */,
 				20CDC93B2660B33E00FFCB53 /* SceneDelegate.swift in Sources */,
 				20CDC9572660C1A300FFCB53 /* Constants.swift in Sources */,

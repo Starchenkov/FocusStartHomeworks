@@ -29,6 +29,7 @@ class MainViewController: UIViewController
         textField.placeholder = Constants.textFieldURLPlaceholderText
         return textField
     }()
+    
     private var progressView: UIProgressView = {
         var progressView = UIProgressView()
         progressView.progress = 0.0
@@ -55,15 +56,15 @@ class MainViewController: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.configUI()
-        presenter.viewIsLoaded(view: self)
+        self.configureUI()
+        presenter.viewDidLoad(view: self)
     }
     override func viewWillAppear(_ animated: Bool) {
         self.reloadData()
     }
     
     // MARK:- ConfigureUI
-    private func configUI() {
+    private func configureUI() {
         self.view.backgroundColor = .white
         self.configTextField()
         self.configProgressView()
@@ -117,7 +118,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return Constants.heightForRow
     }
 }
 

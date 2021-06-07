@@ -9,7 +9,7 @@ import UIKit
 public struct Constants
 {
     static let buttonDownloadName = "Загрузить"
-    static let buttonDownloadColor  = UIColor.blue
+    static let buttonDownloadColor = UIColor.blue
     
     static let textFieldURLPlaceholderText = "Введите URL картинки"
     
@@ -17,4 +17,6 @@ public struct Constants
     static let messageWrongURL = "Проблема URL строки"
     static let messageNotData = "Нет данных для загрузки"
     static let messageDataIsNotImage = "Скачанные данные не изображение"
+    
+    static let heightForRow: CGFloat = 200
 }

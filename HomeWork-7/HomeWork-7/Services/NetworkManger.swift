@@ -27,7 +27,6 @@ class NetworkManager: NSObject, NetworkManagerProtocol
     
     private lazy var backgroundSession: URLSession = {
         let config = URLSessionConfiguration.background(withIdentifier: "background.session.download.task")
-        //config.isDiscretionary = true
         config.sessionSendsLaunchEvents = true
         return URLSession(configuration: config, delegate: self, delegateQueue: nil)
     }()
@@ -48,7 +47,6 @@ class NetworkManager: NSObject, NetworkManagerProtocol
     
     private func startDownloadImageInBackground(url: URL) {
         let downloadTask = backgroundSession.downloadTask(with: url)
-        downloadTask.earliestBeginDate = Date().addingTimeInterval(2)
         downloadTask.countOfBytesClientExpectsToSend = 512
         downloadTask.countOfBytesClientExpectsToReceive = 15 * 1024 * 1024
         downloadTask.resume()

@@ -6,11 +6,11 @@
 //
 
 import Foundation
-import UIKit
+import UIKit.UIImage
 
 protocol MainPresenterProtocol
 {
-    func viewIsLoaded(view: MainViewProtocol)
+    func viewDidLoad(view: MainViewProtocol)
     func numberOfRowTable() -> Int
     func configCell(cell: ImageTableViewCell, indexPath: IndexPath)
     func downloadButtonTap(text: String)
@@ -20,13 +20,13 @@ class MainPresenter: MainPresenterProtocol
 {
     private var networkManager: NetworkManagerProtocol
     private weak var mainView: MainViewProtocol?
-    private var arrayImageData = [ImageData]()
+    private var arrayImageData = [UIImage]()
     
     init(networkManager: NetworkManagerProtocol) {
         self.networkManager = networkManager
     }
     
-    public func viewIsLoaded(view: MainViewProtocol) {
+    public func viewDidLoad(view: MainViewProtocol) {
         self.mainView = view
     }
     
@@ -35,8 +35,8 @@ class MainPresenter: MainPresenterProtocol
     }
     
     public func configCell(cell: ImageTableViewCell, indexPath: IndexPath) {
-        let model = arrayImageData[indexPath.row]
-        cell.set(with: model)
+        let image = arrayImageData[indexPath.row]
+        cell.set(with: image)
     }
     
     public func downloadButtonTap(text: String) {
@@ -62,7 +62,7 @@ class MainPresenter: MainPresenterProtocol
             guard let self = self else { return }
             if let imageData = try? Data(contentsOf: location), let image = UIImage(data: imageData) {
                 print("преобразовали данные в картинку")
-                self.arrayImageData.append(ImageData.init(image: image))
+                self.arrayImageData.append(image)
                 DispatchQueue.main.async {
                     self.mainView?.reloadData()
                     print("картинку добавили в таблицу, интерфейс обновлен")

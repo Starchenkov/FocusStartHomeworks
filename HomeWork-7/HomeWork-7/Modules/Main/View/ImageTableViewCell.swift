@@ -11,7 +11,7 @@ class ImageTableViewCell: UITableViewCell
 {    
     static let identifier = "ImageTableViewCell"
     
-    private var downloadImage: UIImageView = {
+    private var downloadedImage: UIImageView = {
         var image = UIImageView()
         image.layer.cornerRadius = 5
         image.layer.masksToBounds = true
@@ -30,14 +30,14 @@ class ImageTableViewCell: UITableViewCell
     
     func configureCell() {
         self.selectionStyle = .none
-        self.contentView.addSubview(downloadImage)
+        self.contentView.addSubview(downloadedImage)
         
-        downloadImage.snp.makeConstraints { (make) in
+        downloadedImage.snp.makeConstraints { (make) in
             make.edges.equalToSuperview().inset(5)
         }
     }
     
-    func set(with model: ImageData) {
-        self.downloadImage.image = model.image
+    func set(with image: UIImage) {
+        self.downloadedImage.image = image
     }
 }
