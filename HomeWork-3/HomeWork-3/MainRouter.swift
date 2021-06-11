@@ -66,7 +66,7 @@ internal final class MainRouter
         self.secondNavController.tabBarItem.image = UIImage(systemName: "keyboard")
         self.secondScreenViewController.navigationCollectionButtonHandler = {
             let model = DataModel()
-            let quoteViewModel = QuoteViewModel(model: model)
+            let quoteViewModel = QuotesViewModel(model: model)
             let collectionViewController = CollectionViewController(viewModel: quoteViewModel)
             self.secondNavController.present(collectionViewController, animated: true)
         }
