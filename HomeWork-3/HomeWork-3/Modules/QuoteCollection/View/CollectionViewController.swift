@@ -9,11 +9,11 @@ import UIKit
 
 internal final class CollectionViewController: LoggerViewController
 {
-    private var viewModel: QuoteViewModelProtocol
+    private var viewModel: QuotesViewModelProtocol
 
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
 
-    init(viewModel: QuoteViewModelProtocol) {
+    init(viewModel: QuotesViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -57,7 +57,7 @@ extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.identifier, for: indexPath) as? CollectionViewCell else { return UICollectionViewCell() }
     
-        cell.viewModel = viewModel.quoteCellViewModel(forIndex: indexPath.row)
+        cell.viewModel = viewModel.quotesCellViewModel(forIndex: indexPath.row)
         return cell
     }
     
