@@ -12,6 +12,16 @@
 		20B832E926330C1A000572C5 /* ThreadSafeArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B832E826330C1A000572C5 /* ThreadSafeArray.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		20FF6067267343F6000D1E38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 20FF6063267343F6000D1E38 /* HomeWork-8.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 202E14E7266FC7AB007E1CA5;
+			remoteInfo = "HomeWork-8";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		20B832D726330B20000572C5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -29,6 +39,7 @@
 		20B832DC26330B20000572C5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		20B832E526330B81000572C5 /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Car.swift; path = "../HomeWork-1/HomeWork-1/Car.swift"; sourceTree = "<group>"; };
 		20B832E826330C1A000572C5 /* ThreadSafeArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadSafeArray.swift; sourceTree = "<group>"; };
+		20FF6063267343F6000D1E38 /* HomeWork-8.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "HomeWork-8.xcodeproj"; path = "../HomeWork-8/HomeWork-8.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +56,7 @@
 		20B832D026330B20000572C5 = {
 			isa = PBXGroup;
 			children = (
+				20FF6063267343F6000D1E38 /* HomeWork-8.xcodeproj */,
 				20B832E526330B81000572C5 /* Car.swift */,
 				20B832DB26330B20000572C5 /* HomeWork-2 */,
 				20B832DA26330B20000572C5 /* Products */,
@@ -66,6 +78,14 @@
 				20B832E826330C1A000572C5 /* ThreadSafeArray.swift */,
 			);
 			path = "HomeWork-2";
+			sourceTree = "<group>";
+		};
+		20FF6064267343F6000D1E38 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20FF6068267343F6000D1E38 /* HomeWork-8.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,12 +133,28 @@
 			mainGroup = 20B832D026330B20000572C5;
 			productRefGroup = 20B832DA26330B20000572C5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 20FF6064267343F6000D1E38 /* Products */;
+					ProjectRef = 20FF6063267343F6000D1E38 /* HomeWork-8.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				20B832D826330B20000572C5 /* HomeWork-2 */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		20FF6068267343F6000D1E38 /* HomeWork-8.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "HomeWork-8.app";
+			remoteRef = 20FF6067267343F6000D1E38 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		20B832D526330B20000572C5 /* Sources */ = {
